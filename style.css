@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: FEFFFF;
+    background-color: #FEFFFF;
 }
 
 /* styles for the list items in the nav and menu button*/
@@ -26,9 +26,12 @@ header {
     padding: 30px 10%; /* 30px top & bottom, 10% on the sides - padding space */
 }
 
-/* logo stylings, and navigation menu links styles*/
+/* logo stylings, and navigation menu links styles - used chatgpt to make this responsive*/
 .logo {
     cursor: pointer; /* when  you hover over the logo it turns into a cursor */
+    max-width: 100%; /* Ensures the logo doesn't exceed the container's width */
+    height: auto; /* Allows the logo to scale proportionally based on its width */
+    max-height: 100px; /* Optionally, you can set a maximum height for the logo */
 }
 
 .nav__links {
