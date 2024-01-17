@@ -56,7 +56,7 @@ header {
 /* button styles*/
 button {
     padding: 9px 25px;
-    background-color: rgb(0, 163, 141); /*using rgba for opacity change on hover later*/
+    background-color: rgb(23, 37, 42); /*using rgba for opacity change on hover later*/
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -64,5 +64,5 @@ button {
 }
 
 button:hover{
-    background-color: rgba(0, 163, 141, 0.8);
+    background-color: rgba(23, 37, 42, 0.8);
 }

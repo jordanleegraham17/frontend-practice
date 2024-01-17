@@ -1,0 +1,9 @@
+Colours to use:
+
+Darkest: #17252A
+
+Dark Green: #2B7A78
+Normal Green: #3AAFA9
+
+Off white: #DEF2F1
+White: FEFFFF
