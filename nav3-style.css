@@ -29,10 +29,17 @@ header {
 /* logo stylings, and navigation menu links styles - used chatgpt to make this responsive*/
 .logo {
     cursor: pointer; /* when  you hover over the logo it turns into a cursor */
+    order: 3; /*if we want to put our logo to the far right - in the html it is the first thing in the div class so by using order 3 it shifts it all the way after the nav list and button*/
+    margin-left: auto; /*pushing logo to the far right*/
     margin-right: auto; /*makes the logo move back over to the left*/
     max-width: 100%; /* Ensures the logo doesn't exceed the container's width */
     height: auto; /* Allows the logo to scale proportionally based on its width */
     max-height: 100px; /* Optionally, you can set a maximum height for the logo */
+}
+
+/*NEW: Specifically targeting the nav menu*/
+nav {
+    order: 1;
 }
 
 .nav__links {
@@ -45,6 +52,12 @@ header {
     padding: 0px 20px; /*0px on top, 20px on the sides*/
 }
 
+/* in this nav list we have moved the menu items about, contact, projects etc to the far left - this is how we target the first word 'about' and remove its left padding as it is first in the list, padding is not required*/
+/* how to target the first child of the nav links list, alter value to target different item of the list */
+.nav__links li:nth-child(1){
+    padding: 0 20px 0 0; /*0px on top, 20px on the sides*/
+}
+
 /* targeting the link words to animation them on hover*/
 .nav__links li a{
     transition: all 0.3s ease 0s; /* target all words, 0.3s transition and ease no delay */
@@ -52,6 +65,11 @@ header {
 /* what happens on hover */
 .nav__links li a:hover{
     color: #2B7A78;
+}
+
+/*target the cta class - altering its order*/
+.cta {
+    order: 2;
 }
 
 /* button styles*/
