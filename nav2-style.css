@@ -21,7 +21,7 @@ li, a, button {
 /* styles for the header*/
 header {
     display: flex; /*assigns flex container w/ no direction so items go from left to right automatically*/
-    justify-content: space-between; /*moves left and right item to the far corners of their side, evenly spacing the center items between them*/
+    justify-content: flex-end; /*push everything to the right*/
     align-items: center; /*take all header items and center them in the middle*/
     padding: 30px 10%; /* 30px top & bottom, 10% on the sides - padding space */
 }
@@ -29,6 +29,7 @@ header {
 /* logo stylings, and navigation menu links styles - used chatgpt to make this responsive*/
 .logo {
     cursor: pointer; /* when  you hover over the logo it turns into a cursor */
+    margin-right: auto; /*makes the logo move back over to the left*/
     max-width: 100%; /* Ensures the logo doesn't exceed the container's width */
     height: auto; /* Allows the logo to scale proportionally based on its width */
     max-height: 100px; /* Optionally, you can set a maximum height for the logo */
@@ -55,6 +56,7 @@ header {
 
 /* button styles*/
 button {
+    margin-left: 20px; /*evenly space button*/
     padding: 9px 25px;
     background-color: rgb(23, 37, 42); /*using rgba for opacity change on hover later*/
     border: none;
