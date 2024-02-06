@@ -4,3 +4,52 @@ body {
     margin: 30px;
     font-family: "Poppins";
 }
+
+/* directly targeting the entire grid section that we begin with*/
+.grid-container {
+    background: #eee;
+    max-width: 900px;
+    margin: 0 auto; /* margin top & bottom = 0 ; margin left & right = automatic ... this is centering the container on the page for now*/
+    /*making grid layout*/
+    display: grid;
+    /*dividing the above 900px specification into 3 columns all = 300px.*/
+    grid-template-columns: repeat(6, 1fr);
+    /*manually specify the height of rows in the grid*/
+    grid-template-rows: 100px 200px 300px; /*first row = 100px, 2nd row = 200px and 3rd row = 300px*/
+    /*create gutters or gaps between columns and rows*/
+    gap: 10px;
+    /*justify-items refers to how we justify items ACROSS the grid vertically*/
+    justify-items: stretch; /*start - moves each item to the start of the grid column, end -  moves them to the end, stretch - makes them stretch the entire column, center - to center items vertically*/
+    /*align-items refers to how we justify items DOWN the grid horizontally*/
+    align-items: stretch; /*align-items works horizontally where the elements sit. Start - puts them at the top of their column, End - puts them at the bottom of their column*/
+}
+
+/* By using '> div' we are directly targeting any 'div' elements which are a child of the grid and effecting these*/
+.grid-container > div {
+    background: #ccc;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #777;
+}
+/* we can use 'nth-child' to use as a 'selector' for each of the above div elements like in the following script */
+.grid-container > div:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+.grid-container > div:nth-child(2) {
+    grid-column: span 3; /*spans the width of 3 columns*/
+}
+.grid-container > div:nth-child(3) {
+    grid-column: span 1; /* grid-column: 5; ... simply puts the 3rd child into the column 5 position*/
+}
+.grid-container > div:nth-child(4) {
+    grid-column: 2 / 6; /* same as the comment above, simply begins the child from the column number - in this instance no. 2*/
+    align-self: end; /*we can manually override the original settings for an individual component by using 'self' after an 'align' or 'justify' property*/
+}
+.grid-container > div:nth-child(5) {
+    grid-column: span 3;
+}
+.grid-container > div:nth-child(6) {
+    grid-column: span 3;
+    justify-self: end;
+    align-self: center;
+}
