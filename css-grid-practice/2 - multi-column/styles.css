@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+    background-color: #F4F3F2;
+    font-family: "Poppins";
+}
+
+.grid-container {
+    display: grid;
+    background: #E6F8F6;
+    max-width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: 120px 400px 100px 100px 100px 100px 120px;
+    grid-row-gap: 10px;
+}
+
+.grid-container > div {
+    border: 1px dashed #777;
+    text-align: center;
+    padding: 50px;
+}
+
+.grid-container > div:nth-child(1) {
+    grid-column: span 8;
+    background: #A19AD1;
+}
+.grid-container > div:nth-child(2) {
+    grid-column: span 8;
+    background: #8FC2DF;
+}
+.grid-container > div:nth-child(3) {
+    grid-column: span 4;
+    background: #C2E0AE;
+}
+.grid-container > div:nth-child(4) {
+    grid-column: 5 / span 4;
+    background: #EFEFA8;
+}
+.grid-container > div:nth-child(5) {
+    grid-column: span 8;
+    background: #EDCB9C;
+}
+.grid-container > div:nth-child(6) {
+    grid-column: span 8;
+    background: #D99CA5;
+}
+.grid-container > div:nth-child(7) {
+    grid-column: span 8;
+    background: #A19AD1;
+}
