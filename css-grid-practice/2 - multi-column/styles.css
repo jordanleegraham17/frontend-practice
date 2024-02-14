@@ -11,41 +11,59 @@ body {
     max-width: 100%;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 10px;
-    grid-template-rows: 120px 400px 100px 100px 100px 100px 120px;
+    grid-template-rows: auto 400px auto auto auto auto;
     grid-row-gap: 10px;
 }
 
-.grid-container > div {
+.grid-container > section {
     border: 1px dashed #777;
     text-align: center;
     padding: 50px;
 }
 
-.grid-container > div:nth-child(1) {
+.header {
     grid-column: span 8;
+    position: relative;
     background: #A19AD1;
 }
-.grid-container > div:nth-child(2) {
+.site-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: dashed 1px #FFF;
+}
+.logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    margin-right: auto;
+    cursor: pointer;
+}
+.nav__links {
+    list-style: none;
+}
+.nav__links li {
+    display: inline-flex;
+    padding: 0px 20px;
+}
+
+.banner {
     grid-column: span 8;
     background: #8FC2DF;
 }
-.grid-container > div:nth-child(3) {
-    grid-column: span 4;
+.image-text {
+    grid-column: span 8;
     background: #C2E0AE;
 }
-.grid-container > div:nth-child(4) {
-    grid-column: 5 / span 4;
-    background: #EFEFA8;
-}
-.grid-container > div:nth-child(5) {
+.three-data-points {
     grid-column: span 8;
     background: #EDCB9C;
 }
-.grid-container > div:nth-child(6) {
+.images-above-text {
     grid-column: span 8;
     background: #D99CA5;
 }
-.grid-container > div:nth-child(7) {
+.footer {
     grid-column: span 8;
     background: #A19AD1;
 }
