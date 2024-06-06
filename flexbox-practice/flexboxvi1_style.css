@@ -12,21 +12,29 @@ body {
     font-size: xx-large;
 }
 
-.container {
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    
-    height: 300px;
+
+    margin-inline: auto;
+
+    background-color: #84dcc6;
+    height: 200px;
     width: 100%;
-    border: 1px solid #84dcc6;
 }
 
-.block {
-    height: 150px;
-    width: 150px;
-    border-radius: 20%;
-    background-color: #a5ffd6;
+.logo {
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: auto;
+
+    height: 100px;
+    width: 100px;
+    background-color: #ff686b;
+}
+
+.navigation {
+    height: 100px;
+    width: 350px;
+    background-color: #a5ffd6;
 }
